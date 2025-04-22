@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+.user-input {
+    margin-bottom: 10px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading, .error {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
