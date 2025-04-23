@@ -1,21 +1,22 @@
 <div class="container">
-    <input (input)="query.set($any($event.target).value)" class="user-input" type="text" value="" placeholder="Search user..."/>
+    <input (input)="query.set($any($event.target).value)" class="user-input" type="text" value=""
+        placeholder="Search user..." />
     <div class="btn-container">
         <button (click)="users.reload()">Reload</button>
         <button (click)="adduser()">Add User</button>
         <button (click)="users.set([])">Clear</button>
     </div>
     @if(users.isLoading()) {
-        <div class="loading">Loading...</div>
+    <div class="loading">Loading...</div>
     }
     @if(users.error()) {
-       <div class="error">{{users.error()}}</div>
+    <div class="error">{{users.error()}}</div>
     }
     <ul class="user-list">
         @for(user of users.value(); track user.id) {
-            <li>{{user.firstName}} {{user.lastName}}</li>
+        <li>{{user.firstName}} {{user.lastName}}</li>
         } @empty {
-            <li>No data.</li>
+        <li>No data.</li>
         }
     </ul>
 </div>

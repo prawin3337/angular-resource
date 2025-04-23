@@ -17,7 +17,8 @@
     justify-content: space-around;
 }
 
-.loading, .error {
+.loading,
+.error {
     margin: 10px 0;
     text-align: center;
 }
